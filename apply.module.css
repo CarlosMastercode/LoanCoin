@@ -1,0 +1,209 @@
+.wrap {
+  min-height: 100vh;
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.logo span { color: var(--cream); }
+
+.navRight { display: flex; align-items: center; gap: 1rem; }
+
+.navNote {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* PROGRESS */
+.progress {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.progressStep.active { color: var(--cream); }
+.progressStep.done { color: var(--gold); }
+
+.progressDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.progressStep.active .progressDot {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.08);
+}
+
+.progressStep.done .progressDot {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.12);
+}
+
+/* ERROR */
+.errorBanner {
+  background: rgba(220, 80, 80, 0.12);
+  border: 1px solid rgba(220, 80, 80, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #f87171;
+  margin-bottom: 1.25rem;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.cardSub {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* FORM */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* BUTTONS */
+.btnPrimary {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover { background: var(--gold-light); }
+.btnPrimary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btnGhost {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.btnGhost:hover { border-color: var(--gold); }
+
+/* SUCCESS */
+.successCard {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.loanNum {
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}

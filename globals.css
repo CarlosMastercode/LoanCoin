@@ -1,0 +1,76 @@
+:root {
+  --navy: #0b1f3a;
+  --navy-mid: #153358;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f5f0e8;
+  --text-muted: #7a8fa6;
+  --border: rgba(201, 168, 76, 0.25);
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'DM Serif Display', serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--navy);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type='range'] {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 2px;
+  background: rgba(201, 168, 76, 0.2);
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  cursor: pointer;
+  border: 2px solid var(--navy);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='date'],
+input[type='number'],
+select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+input[type='date']:focus,
+input[type='number']:focus,
+select:focus {
+  border-color: var(--gold);
+}
+
+select option {
+  background: var(--navy-mid);
+  color: var(--cream);
+}
